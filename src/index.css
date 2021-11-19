@@ -1,0 +1,77 @@
+/* include basic tailwindcss */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* scrolling anchor tags */
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  .text {
+    @apply text-gray-900 subpixel-antialiased;
+  }
+
+  .lite-shadow {
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .new-shadow {
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .hover\:new-shadow:hover {
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .group:hover .group-hover\:new-shadow {
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-inner-xl {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    @apply text-7xl md:text-8xl lg:text-9xl text;
+  }
+  h2 {
+    @apply text-5xl md:text-6xl text;
+  }
+
+  h3 {
+    @apply text-3xl lg:text-4xl text;
+  }
+
+  h4 {
+    @apply text-xl lg:text-2xl text;
+  }
+
+  p {
+    @apply text-sm md:text-sm/base lg:text-base text;
+  }
+
+  h5 {
+    @apply text-lg lg:text-xl text;
+  }
+
+  .anim {
+    @apply ease-in-out active:outline-none focus:outline-none transform transition;
+  }
+
+  button {
+    @apply duration-500 hover:scale-[1.03] active:scale-[0.95] hover:ring-1 rounded-lg shadow-sm hover:shadow text anim;
+  }
+
+  a {
+  }
+}
+
+@layer components {
+}
